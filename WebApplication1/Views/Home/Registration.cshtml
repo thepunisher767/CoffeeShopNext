@@ -1,0 +1,31 @@
+﻿
+<h2>Register Here!!!</h2>
+<h3>@ViewBag.Message</h3>
+
+<form method="post" action="/Home/ThankYou">
+    <label for="firstname">First name:</label><br>
+    <input type="text" name="firstname" required><br>
+    <label for="lastname">Last name:</label><br>
+    <input type="text" name="lastname" required><br />
+    <label for="email">Email Address:</label><br>
+    <input type="text" name="email" required><br>
+    @Html.Raw(ViewBag.EmailCheck)
+    <label for="phone">Phone:</label><br>
+    <input type="text" name="phone" required><br>
+    @Html.Raw(ViewBag.PhoneCheck)
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" required><br />
+    @Html.Raw(ViewBag.PasswordMatch)
+    <label for="verifypassword">Re-enter Password:</label><br>
+    <input type="password" name="verifypassword" required><br /><br />
+    <label for="catordog">Cats or Dogs???:</label>
+    <select name="catordog" required>
+        <option style="display:none"></option>
+        <option value="Cats">Cats</option>
+        <option value="Dogs">Dogs</option>
+    </select><br />
+    <input type="checkbox" name="lottery" required>
+    <label for="lottery">Accept free lottery entry???</label><br>
+    <input type="submit" value="Submit">
+</form>
+
